@@ -1,0 +1,58 @@
+{
+  "name": "Dev DocTasks",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "mhutchie.git-graph",
+        "eamodio.gitlens",
+        "github.vscode-pull-request-github",
+        "humao.rest-client",
+        "dsznajder.es7-react-js-snippets",
+        "bradlc.vscode-tailwindcss",
+        "formulahendry.auto-rename-tag",
+        "prisma.prisma",
+        "streetsidesoftware.code-spell-checker",
+        "ms-ceintl.vscode-language-pack-ja",
+        "oderwat.indent-rainbow",
+        "vscode-icons-team.vscode-icons",
+        "xabikos.javascriptsnippets",
+        "yoavbls.pretty-ts-errors",
+        "andys8.jest-snippets",
+        "Codeium.codeium",
+        "PKief.material-icon-theme",
+        "corschenzi.mermaid-graphical-editor",
+        "bierner.markdown-mermaid",
+        "ckolkman.vscode-postgres"
+      ],
+      "settings": {
+        "remote.autoForwardPorts": false,
+        "typescript.tsdk": "frontend/node_modules/typescript/lib",
+        "typescript.enablePromptUseWorkspaceTsdk": true,
+        "[typescript]": {
+          "typescript.tsdk": "backend/node_modules/typescript/lib"
+        },
+        "[typescriptreact]": {
+          "typescript.tsdk": "frontend/node_modules/typescript/lib"
+        },
+        "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+        "typescript.tsserver.maxTsServerMemory": 4096,
+        "typescript.tsserver.watchOptions": {
+          "watchFile": "useFsEvents",
+          "watchDirectory": "useFsEvents",
+          "fallbackPolling": "dynamicPriorityPolling"
+        },
+        "typescript.tsserver.pluginPaths": [
+          "frontend/node_modules",
+          "backend/node_modules"
+        ]
+      }
+    }
+  },
+  "forwardPorts": [5173, 3000],
+  "remoteUser": "node"
+}
