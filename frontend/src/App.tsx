@@ -1,5 +1,7 @@
+import { UserList } from "./features/user/components/UserList"
+
 export const App = () => {
   return (
-    <div className="text-red-500">App</div>
+    <UserList />
   )
 }
