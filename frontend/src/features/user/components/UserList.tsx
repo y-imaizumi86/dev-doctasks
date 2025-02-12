@@ -1,4 +1,5 @@
 import { useUser } from "../hooks/useUser";
+import { UserItem } from "./UserItem";
 
 export const UserList = () => {
   const {users, isUserLoading, isUserError} = useUser();
@@ -16,12 +17,10 @@ export const UserList = () => {
   }
 
   return (
-    <ul className="space-y-4">
+    <div className="space-y-2">
       {users.map((user) => (
-        <li key={user.user_id}>
-          {user.name}
-        </li>
+        <UserItem key={user.user_id} user={user} />
       ))}
-    </ul>
+    </div>
   )
 }
